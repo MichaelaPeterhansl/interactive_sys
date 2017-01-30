@@ -13,7 +13,7 @@ function change_counter(val) {
 
 function reset_counter(){
     var r = window.confirm("Are you sure you want to reset the counter?");
-    if (r == true){
+    if (r === true){
        var encounter = document.getElementById('encounter').value = 0;
         var new_counter = 0;
         document.getElementById('encounter').value = new_counter;
@@ -30,12 +30,12 @@ function showGens(evt, gen) {
     var i, tabcontent, tablinks;
 
     tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
+    for (i = 0; i < tabcontent.length; i += 1) {
         tabcontent[i].style.display = "none";
     }
 
     tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
+    for (i = 0; i < tablinks.length; i += 1) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
 
@@ -45,19 +45,20 @@ function showGens(evt, gen) {
 
 
 
-function showMethods(evet, method) {
+function showMethods(evt, method) {
     var i, tabcontent, tablinks;
 
     tabcontent = document.getElementsByClassName("tabcontent2");
-    for (i = 0; i < tabcontent.length; i++) {
+    for (i = 0; i < tabcontent.length; i += 1) {
         tabcontent[i].style.display = "none";
     }
 
     tablinks = document.getElementsByClassName("tablinks2");
-    for (i = 0; i < tablinks.length; i++) {
+    for (i = 0; i < tablinks.length; i += 1) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
 
     document.getElementById(method).style.display = "block";
-    evet.currentTarget.className += " active";
+    evt.currentTarget.className += " active";
 }
+
